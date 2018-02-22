@@ -8,15 +8,13 @@
 
 import UIKit
 
-let ukrainian = "uk"
-let english = "en"
-var languages = [english, ukrainian]
+var languages = ["en", "uk"]
 class TranslatorVC: UIViewController {
     @IBOutlet weak var textToTranslateTextField: UITextField!
     @IBOutlet weak var translateToLanguageLbl: UILabel!
     @IBOutlet weak var translationFromLanguageLbl: UILabel!
     @IBOutlet weak var translatedTextView: UITextView!
-    var translateParams = TranslateParams(source: english, target: ukrainian, text:"")
+    var translateParams = TranslateParams(source: languages[0], target: languages[1], text:"")
     var translationText = ""
 
     weak var delegate: TranslatorVCDelegate?
@@ -26,12 +24,11 @@ class TranslatorVC: UIViewController {
     }
     
     func changeTranslatingLanguage() {
-        let newSource = translateParams.target
-        let newTarget = translateParams.source
-        translateParams.source = newSource
-        translateParams.target = newTarget
-        translationFromLanguageLbl.text = newSource
-        translateToLanguageLbl.text = newTarget
+        languages.reverse()
+        translateParams.source = languages[0]
+        translateParams.target = languages[1]
+        translationFromLanguageLbl.text = languages[0]
+        translateToLanguageLbl.text = languages[1]
     }
     
     @IBAction func changeTranslationLanguageActionBtn(_ sender: Any) {
