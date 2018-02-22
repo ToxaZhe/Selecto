@@ -7,23 +7,25 @@
 //
 
 import UIKit
+
 let ukrainian = "uk"
 let english = "en"
+var languages = [english, ukrainian]
 class TranslatorVC: UIViewController {
     @IBOutlet weak var textToTranslateTextField: UITextField!
     @IBOutlet weak var translateToLanguageLbl: UILabel!
     @IBOutlet weak var translationFromLanguageLbl: UILabel!
     @IBOutlet weak var translatedTextView: UITextView!
-    
     var translateParams = TranslateParams(source: english, target: ukrainian, text:"")
     var translationText = ""
+
     weak var delegate: TranslatorVCDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
     }
     
-    @IBAction func changeTranslationLanguageActionBtn(_ sender: Any) {
+    func changeTranslatingLanguage() {
         let newSource = translateParams.target
         let newTarget = translateParams.source
         translateParams.source = newSource
@@ -31,27 +33,36 @@ class TranslatorVC: UIViewController {
         translationFromLanguageLbl.text = newSource
         translateToLanguageLbl.text = newTarget
     }
+    
+    @IBAction func changeTranslationLanguageActionBtn(_ sender: Any) {
+        changeTranslatingLanguage()
+    }
     @IBAction func backActionBtn(_ sender: Any) {
+        view.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
-    func translate(translateParams: TranslateParams) {
+    func translate(withTranslateParams params: TranslateParams) {
         let translator = TranslatorApi.shared
-        translator.translate(params: translateParams) { (result) in
+        translator.translate(params: params) { (result) in
             switch result {
             case .failure(errorMessage: let errString):
                 print(errString)
             case .success(data: let data):
                 do {
                     let translatedText = try Translated.tryDecodeJSON(fromData: data)
-                    let localTranslation = self.localModelPrepareForSaving(translationText: translateParams.text, translation: translatedText)
-                    self.delegate?.addTranslation(translation: localTranslation)
-                    DispatchQueue.main.async {
-                        self.translatedTextView.text = translatedText
-                    }
+                    self.refreshViewAndSave(translatedText: translatedText)
                 } catch let error {
                     print(error.localizedDescription)
                 }
             }
+        }
+    }
+    
+    func refreshViewAndSave(translatedText text: String) {
+        let localTranslation = self.localModelPrepareForSaving(translationText: translateParams.text, translation: text)
+        DispatchQueue.main.async {
+            self.delegate?.addTranslation(translation: localTranslation)
+            self.translatedTextView.text = text
         }
     }
     
@@ -61,7 +72,7 @@ class TranslatorVC: UIViewController {
             return
         }
         translateParams.text = text
-        translate(translateParams: translateParams)
+        translate(withTranslateParams: translateParams)
     }
     func localModelPrepareForSaving(translationText: String, translation: String) -> Translation {
         let localSavingText = translationText as NSString

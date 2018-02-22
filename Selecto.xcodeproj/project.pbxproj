@@ -18,6 +18,10 @@
 		CE321DE7203EF04600E8E954 /* TranslatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE6203EF04600E8E954 /* TranslatorVC.swift */; };
 		CE321DE9203EF68200E8E954 /* TranslatorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE8203EF68200E8E954 /* TranslatorAPI.swift */; };
 		CE321DEB203EFABE00E8E954 /* Translated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DEA203EFABE00E8E954 /* Translated.swift */; };
+		CE321DEE203F2F4500E8E954 /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DED203F2F4500E8E954 /* GifCollectionViewCell.swift */; };
+		CE321DF0203F2F8800E8E954 /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DEF203F2F8800E8E954 /* GifImageView.swift */; };
+		CE321DF2203F2FED00E8E954 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE321DF1203F2FED00E8E954 /* giphy.gif */; };
+		CE321DF4203F302F00E8E954 /* GifCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DF3203F302F00E8E954 /* GifCollectionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		CE321DE6203EF04600E8E954 /* TranslatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorVC.swift; sourceTree = "<group>"; };
 		CE321DE8203EF68200E8E954 /* TranslatorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorAPI.swift; sourceTree = "<group>"; };
 		CE321DEA203EFABE00E8E954 /* Translated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translated.swift; sourceTree = "<group>"; };
+		CE321DED203F2F4500E8E954 /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE321DEF203F2F8800E8E954 /* GifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
+		CE321DF1203F2FED00E8E954 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
+		CE321DF3203F302F00E8E954 /* GifCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		CE321DC6203EBED700E8E954 /* Selecto */ = {
 			isa = PBXGroup;
 			children = (
+				CE321DEC203F2BC100E8E954 /* GifCollection */,
 				CE321DDA203ED88C00E8E954 /* Translator */,
 				CE321DD9203ED84E00E8E954 /* AdditionalFiles */,
 			);
@@ -78,6 +87,7 @@
 				CE321DC7203EBED700E8E954 /* AppDelegate.swift */,
 				CE321DD0203EBED700E8E954 /* LaunchScreen.storyboard */,
 				CE321DCB203EBED700E8E954 /* Main.storyboard */,
+				CE321DF1203F2FED00E8E954 /* giphy.gif */,
 				CE321DD3203EBED700E8E954 /* Info.plist */,
 				CE321DCE203EBED700E8E954 /* Assets.xcassets */,
 			);
@@ -104,6 +114,16 @@
 				CE321DE2203EE29D00E8E954 /* SQLModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE321DEC203F2BC100E8E954 /* GifCollection */ = {
+			isa = PBXGroup;
+			children = (
+				CE321DED203F2F4500E8E954 /* GifCollectionViewCell.swift */,
+				CE321DF3203F302F00E8E954 /* GifCollectionVC.swift */,
+				CE321DEF203F2F8800E8E954 /* GifImageView.swift */,
+			);
+			path = GifCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +187,7 @@
 			files = (
 				CE321DD2203EBED700E8E954 /* LaunchScreen.storyboard in Resources */,
 				CE321DCF203EBED700E8E954 /* Assets.xcassets in Resources */,
+				CE321DF2203F2FED00E8E954 /* giphy.gif in Resources */,
 				CE321DCD203EBED700E8E954 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,7 +200,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE321DCA203EBED700E8E954 /* TranslationHistoryVC.swift in Sources */,
+				CE321DF4203F302F00E8E954 /* GifCollectionVC.swift in Sources */,
+				CE321DF0203F2F8800E8E954 /* GifImageView.swift in Sources */,
 				CE321DDF203EDAB400E8E954 /* TranslatedTextTVCell.swift in Sources */,
+				CE321DEE203F2F4500E8E954 /* GifCollectionViewCell.swift in Sources */,
 				CE321DE7203EF04600E8E954 /* TranslatorVC.swift in Sources */,
 				CE321DE9203EF68200E8E954 /* TranslatorAPI.swift in Sources */,
 				CE321DC8203EBED700E8E954 /* AppDelegate.swift in Sources */,
