@@ -15,6 +15,9 @@
 		CE321DDF203EDAB400E8E954 /* TranslatedTextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DDE203EDAB400E8E954 /* TranslatedTextTVCell.swift */; };
 		CE321DE1203EE18E00E8E954 /* SQLDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE0203EE18E00E8E954 /* SQLDatabaseManager.swift */; };
 		CE321DE3203EE29D00E8E954 /* SQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE2203EE29D00E8E954 /* SQLModel.swift */; };
+		CE321DE7203EF04600E8E954 /* TranslatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE6203EF04600E8E954 /* TranslatorVC.swift */; };
+		CE321DE9203EF68200E8E954 /* TranslatorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE8203EF68200E8E954 /* TranslatorAPI.swift */; };
+		CE321DEB203EFABE00E8E954 /* Translated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DEA203EFABE00E8E954 /* Translated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		CE321DDE203EDAB400E8E954 /* TranslatedTextTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatedTextTVCell.swift; sourceTree = "<group>"; };
 		CE321DE0203EE18E00E8E954 /* SQLDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDatabaseManager.swift; sourceTree = "<group>"; };
 		CE321DE2203EE29D00E8E954 /* SQLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLModel.swift; sourceTree = "<group>"; };
+		CE321DE6203EF04600E8E954 /* TranslatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorVC.swift; sourceTree = "<group>"; };
+		CE321DE8203EF68200E8E954 /* TranslatorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorAPI.swift; sourceTree = "<group>"; };
+		CE321DEA203EFABE00E8E954 /* Translated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			children = (
 				CE321DC9203EBED700E8E954 /* TranslationHistoryVC.swift */,
 				CE321DDE203EDAB400E8E954 /* TranslatedTextTVCell.swift */,
+				CE321DE6203EF04600E8E954 /* TranslatorVC.swift */,
 				CE321DDC203ED8B100E8E954 /* Models */,
 			);
 			path = Translator;
@@ -92,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				CE321DE0203EE18E00E8E954 /* SQLDatabaseManager.swift */,
+				CE321DE8203EF68200E8E954 /* TranslatorAPI.swift */,
+				CE321DEA203EFABE00E8E954 /* Translated.swift */,
 				CE321DE2203EE29D00E8E954 /* SQLModel.swift */,
 			);
 			path = Models;
@@ -171,7 +180,10 @@
 			files = (
 				CE321DCA203EBED700E8E954 /* TranslationHistoryVC.swift in Sources */,
 				CE321DDF203EDAB400E8E954 /* TranslatedTextTVCell.swift in Sources */,
+				CE321DE7203EF04600E8E954 /* TranslatorVC.swift in Sources */,
+				CE321DE9203EF68200E8E954 /* TranslatorAPI.swift in Sources */,
 				CE321DC8203EBED700E8E954 /* AppDelegate.swift in Sources */,
+				CE321DEB203EFABE00E8E954 /* Translated.swift in Sources */,
 				CE321DE1203EE18E00E8E954 /* SQLDatabaseManager.swift in Sources */,
 				CE321DE3203EE29D00E8E954 /* SQLModel.swift in Sources */,
 			);

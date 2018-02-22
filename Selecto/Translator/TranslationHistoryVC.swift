@@ -7,11 +7,14 @@
 //
 
 import UIKit
-
+protocol TranslatorVCDelegate : class {
+    func addTranslation(translation: Translation)
+}
 let isTableCreatedKey = "isTableCreated"
 
 class TranslationHistoryVC: UIViewController {
     let defaults = UserDefaults.standard
+    let toTranslatorVCSegueIdentifier = "ToTranslatorVCSegue"
     let translationHistoryCellIdentifier = "TranslationHistoryCell"
     var translates = [Translation]()
     let isTableCreated: Bool = {
@@ -29,6 +32,14 @@ class TranslationHistoryVC: UIViewController {
     }
     
     @IBAction func translateActionBtn(_ sender: Any) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if toTranslatorVCSegueIdentifier == segue.identifier {
+            let destVC = segue.destination as! TranslatorVC
+            destVC.delegate = self
+        }
     }
 }
 
@@ -44,7 +55,7 @@ extension TranslationHistoryVC: UITableViewDataSource {
         return cell
     }
 }
-
+//MARK: SQLiteDatabase
 extension TranslationHistoryVC {
     
     func configureDatabase() {
@@ -70,14 +81,6 @@ extension TranslationHistoryVC {
             print(error.localizedDescription)
         }
     }
-    func createTable() {
-        do {
-            try db!.createTable(table: Translation.self)
-            UserDefaults.standard.set(true, forKey: isTableCreatedKey)
-        } catch {
-            print(db!.errorMessage)
-        }
-    }
     func insert(translation: Translation) {
         do {
             let translation = translation
@@ -86,9 +89,12 @@ extension TranslationHistoryVC {
             print(db!.errorMessage)
         }
     }
-    func insert(translations: [Translation]) {
-        for translation in translations {
-            insert(translation: translation)
+    func createTable() {
+        do {
+            try db!.createTable(table: Translation.self)
+            UserDefaults.standard.set(true, forKey: isTableCreatedKey)
+        } catch {
+            print(db!.errorMessage)
         }
     }
     func getTranslatesFromDb() -> [Translation] {
@@ -96,3 +102,10 @@ extension TranslationHistoryVC {
     }
 }
 
+extension TranslationHistoryVC : TranslatorVCDelegate {
+    func addTranslation(translation: Translation) {
+        translates.append(translation)
+        translationsTableView.reloadData()
+        insert(translation: translation)
+    }
+}
