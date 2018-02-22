@@ -13,6 +13,8 @@
 		CE321DCF203EBED700E8E954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE321DCE203EBED700E8E954 /* Assets.xcassets */; };
 		CE321DD2203EBED700E8E954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE321DD0203EBED700E8E954 /* LaunchScreen.storyboard */; };
 		CE321DDF203EDAB400E8E954 /* TranslatedTextTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DDE203EDAB400E8E954 /* TranslatedTextTVCell.swift */; };
+		CE321DE1203EE18E00E8E954 /* SQLDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE0203EE18E00E8E954 /* SQLDatabaseManager.swift */; };
+		CE321DE3203EE29D00E8E954 /* SQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DE2203EE29D00E8E954 /* SQLModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CE321DD1203EBED700E8E954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE321DD3203EBED700E8E954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE321DDE203EDAB400E8E954 /* TranslatedTextTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatedTextTVCell.swift; sourceTree = "<group>"; };
+		CE321DE0203EE18E00E8E954 /* SQLDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDatabaseManager.swift; sourceTree = "<group>"; };
+		CE321DE2203EE29D00E8E954 /* SQLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		CE321DDC203ED8B100E8E954 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE321DE0203EE18E00E8E954 /* SQLDatabaseManager.swift */,
+				CE321DE2203EE29D00E8E954 /* SQLModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 				CE321DCA203EBED700E8E954 /* TranslationHistoryVC.swift in Sources */,
 				CE321DDF203EDAB400E8E954 /* TranslatedTextTVCell.swift in Sources */,
 				CE321DC8203EBED700E8E954 /* AppDelegate.swift in Sources */,
+				CE321DE1203EE18E00E8E954 /* SQLDatabaseManager.swift in Sources */,
+				CE321DE3203EE29D00E8E954 /* SQLModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
