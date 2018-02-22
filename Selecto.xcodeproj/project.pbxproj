@@ -22,6 +22,9 @@
 		CE321DF0203F2F8800E8E954 /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DEF203F2F8800E8E954 /* GifImageView.swift */; };
 		CE321DF2203F2FED00E8E954 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE321DF1203F2FED00E8E954 /* giphy.gif */; };
 		CE321DF4203F302F00E8E954 /* GifCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DF3203F302F00E8E954 /* GifCollectionVC.swift */; };
+		CE321DF7203F3DF600E8E954 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DF6203F3DF600E8E954 /* ScreenViewController.swift */; };
+		CE321DF9203F459500E8E954 /* ViewWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DF8203F459500E8E954 /* ViewWithBorder.swift */; };
+		CE321DFB203F45D500E8E954 /* RoundedButtonWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE321DFA203F45D500E8E954 /* RoundedButtonWithBorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		CE321DEF203F2F8800E8E954 /* GifImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageView.swift; sourceTree = "<group>"; };
 		CE321DF1203F2FED00E8E954 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		CE321DF3203F302F00E8E954 /* GifCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionVC.swift; sourceTree = "<group>"; };
+		CE321DF6203F3DF600E8E954 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
+		CE321DF8203F459500E8E954 /* ViewWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithBorder.swift; sourceTree = "<group>"; };
+		CE321DFA203F45D500E8E954 /* RoundedButtonWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonWithBorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		CE321DC6203EBED700E8E954 /* Selecto */ = {
 			isa = PBXGroup;
 			children = (
+				CE321DF5203F3D8900E8E954 /* DesignScreen */,
 				CE321DEC203F2BC100E8E954 /* GifCollection */,
 				CE321DDA203ED88C00E8E954 /* Translator */,
 				CE321DD9203ED84E00E8E954 /* AdditionalFiles */,
@@ -124,6 +131,16 @@
 				CE321DEF203F2F8800E8E954 /* GifImageView.swift */,
 			);
 			path = GifCollection;
+			sourceTree = "<group>";
+		};
+		CE321DF5203F3D8900E8E954 /* DesignScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE321DF6203F3DF600E8E954 /* ScreenViewController.swift */,
+				CE321DF8203F459500E8E954 /* ViewWithBorder.swift */,
+				CE321DFA203F45D500E8E954 /* RoundedButtonWithBorder.swift */,
+			);
+			path = DesignScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +223,10 @@
 				CE321DEE203F2F4500E8E954 /* GifCollectionViewCell.swift in Sources */,
 				CE321DE7203EF04600E8E954 /* TranslatorVC.swift in Sources */,
 				CE321DE9203EF68200E8E954 /* TranslatorAPI.swift in Sources */,
+				CE321DFB203F45D500E8E954 /* RoundedButtonWithBorder.swift in Sources */,
+				CE321DF9203F459500E8E954 /* ViewWithBorder.swift in Sources */,
 				CE321DC8203EBED700E8E954 /* AppDelegate.swift in Sources */,
+				CE321DF7203F3DF600E8E954 /* ScreenViewController.swift in Sources */,
 				CE321DEB203EFABE00E8E954 /* Translated.swift in Sources */,
 				CE321DE1203EE18E00E8E954 /* SQLDatabaseManager.swift in Sources */,
 				CE321DE3203EE29D00E8E954 /* SQLModel.swift in Sources */,
