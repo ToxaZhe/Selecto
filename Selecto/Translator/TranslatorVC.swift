@@ -64,10 +64,12 @@ class TranslatorVC: UIViewController {
     }
     
     @IBAction func translateTextActionBtn(_ sender: Any) {
-        guard let text = textToTranslateTextField.text else {
+        guard let text = textToTranslateTextField.text,
+            !textToTranslateTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             print("no text to translate")
             return
         }
+        print("iranslsate text = \(text)?")
         translateParams.text = text
         translate(withTranslateParams: translateParams)
     }
